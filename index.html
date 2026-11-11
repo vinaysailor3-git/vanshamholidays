@@ -42,7 +42,7 @@
       --radius:       12px;
       --radius-sm:    8px;
       --transition:   0.3s ease;
-      --header-h:     72px;
+      --header-h:     86px;
     }
 
     /* =========================================================
@@ -153,13 +153,19 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: var(--bg-white);
+      background: rgba(255, 255, 255, 0.50);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       height: var(--header-h);
       display: flex;
       align-items: center;
-      transition: box-shadow var(--transition);
+      transition: box-shadow var(--transition), background var(--transition);
+      border-bottom: 1px solid rgba(1, 121, 189, 0.08);
     }
-    header.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.12); }
+    header.scrolled {
+      background: rgba(255, 255, 255, 0.75);
+      box-shadow: 0 4px 24px rgba(1, 121, 189, 0.12);
+    }
     .nav-inner {
       display: flex;
       align-items: center;
@@ -174,9 +180,9 @@
       padding: 4px 0;
     }
     .logo-img {
-      height: 56px;
+      height: 74px;
       width: auto;
-      max-width: 210px;
+      max-width: 270px;
       object-fit: contain;
       display: block;
       filter: drop-shadow(0 2px 8px rgba(1, 121, 189, 0.12));
@@ -253,7 +259,7 @@
       }
       .nav-cta { margin: 8px 0 0 0; width: 100%; text-align: center; }
       .nav-cta .btn { width: 100%; display: block; padding: 12px; }
-      .logo-img { height: 46px; max-width: 175px; }
+      .logo-img { height: 60px; max-width: 220px; }
     }
 
     /* =========================================================
@@ -1167,7 +1173,7 @@
     ========================================================= */
     @media (max-width: 768px) {
       :root {
-        --header-h: 64px;
+        --header-h: 76px;
       }
       .container {
         padding: 0 16px;
@@ -1567,7 +1573,7 @@
           <!-- Kedarnath -->
           <article class="dom-card">
             <div class="dom-img-wrap">
-              <img src="https://source.unsplash.com/400x300/?kedarnath,temple,himalaya" alt="Kedarnath Temple" loading="lazy" />
+              <img src="img/vansham_destination_images/kedarnath.jpg" alt="Kedarnath Temple" loading="lazy" />
               <span class="dom-duration-badge">4N / 5D</span>
             </div>
             <div class="dom-body">
@@ -1590,7 +1596,7 @@
           <!-- Manali -->
           <article class="dom-card">
             <div class="dom-img-wrap">
-              <img src="https://source.unsplash.com/400x300/?manali,mountains,snow" alt="Manali" loading="lazy" />
+              <img src="img/vansham_destination_images/manali.jpg" alt="Manali" loading="lazy" />
               <span class="dom-duration-badge">4N / 5D</span>
             </div>
             <div class="dom-body">
@@ -1613,7 +1619,7 @@
           <!-- Shimla -->
           <article class="dom-card">
             <div class="dom-img-wrap">
-              <img src="https://source.unsplash.com/400x300/?shimla,hill-station,india" alt="Shimla" loading="lazy" />
+              <img src="img/vansham_destination_images/shimla.jpg" alt="Shimla" loading="lazy" />
               <span class="dom-duration-badge">3N / 4D</span>
             </div>
             <div class="dom-body">
@@ -1636,7 +1642,7 @@
           <!-- Rajasthan -->
           <article class="dom-card">
             <div class="dom-img-wrap">
-              <img src="https://source.unsplash.com/400x300/?rajasthan,jaipur,fort" alt="Rajasthan" loading="lazy" />
+              <img src="img/vansham_destination_images/rajasthan.jpg" alt="Rajasthan" loading="lazy" />
               <span class="dom-duration-badge">6N / 7D</span>
             </div>
             <div class="dom-body">
@@ -2186,6 +2192,10 @@
 
 </body>
 </html>
+
+
+
+
 
 
 
