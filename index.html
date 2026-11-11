@@ -1,0 +1,1963 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vansham Holidays – Explore the World, Create Memories.</title>
+  <meta name="description" content="Vansham Holidays offers curated domestic and international holiday packages. Discover Goa, Kerala, Kashmir, Singapore, Malaysia, Thailand and more. Book your dream vacation today!" />
+  <meta name="keywords" content="Vansham Holidays, holiday packages, travel agency, Goa tour, Kerala tour, Kashmir tour, Singapore tour, Malaysia tour, Thailand tour, domestic tours, international tours, affordable travel" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Vansham Holidays – Explore the World, Create Memories." />
+  <meta property="og:description" content="Curated holiday packages for domestic and international destinations. Personalized travel planning, honeymoon packages, family vacations and group tours." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="img/heroimage.png" />
+  <meta property="og:url" content="https://www.vanshamholidays.com" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Vansham Holidays – Explore the World, Create Memories." />
+  <meta name="twitter:description" content="Curated holiday packages for domestic and international destinations." />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img/logo.png" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* =========================================================
+       CSS CUSTOM PROPERTIES (DESIGN TOKENS)
+    ========================================================= */
+    :root {
+      --primary:      #F97001;
+      --primary-dark: #d95f00;
+      --secondary:    #0179BD;
+      --secondary-dark: #016299;
+      --bg-white:     #FFFFFF;
+      --bg-light:     #F0F7FC;
+      --text-dark:    #0A2540;
+      --text-blue:    #0179BD;
+      --text-gray:    #556980;
+      --shadow:       0 4px 20px rgba(1, 121, 189, 0.08);
+      --shadow-hover: 0 8px 32px rgba(1, 121, 189, 0.16);
+      --radius:       12px;
+      --radius-sm:    8px;
+      --transition:   0.3s ease;
+      --header-h:     72px;
+    }
+
+    /* =========================================================
+       GLOBAL RESET & BASE
+    ========================================================= */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--text-dark);
+      background: var(--bg-white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    button { cursor: pointer; border: none; outline: none; background: none; font-family: inherit; }
+
+    /* =========================================================
+       UTILITY CLASSES
+    ========================================================= */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .section-title {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 700;
+      color: var(--secondary);
+      margin-bottom: 10px;
+    }
+    .section-subtitle {
+      color: var(--text-gray);
+      font-size: 1rem;
+      margin-bottom: 48px;
+    }
+    .section-header { text-align: center; }
+    .section-header .accent-line {
+      width: 56px;
+      height: 4px;
+      background: var(--primary);
+      border-radius: 2px;
+      margin: 12px auto 20px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      border-radius: 50px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+    }
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+    }
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(249, 112, 1, 0.35);
+    }
+    .btn-secondary {
+      background: var(--secondary);
+      color: #fff;
+    }
+    .btn-secondary:hover {
+      background: var(--secondary-dark);
+      transform: translateY(-2px);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+    .btn-outline:hover {
+      background: var(--primary);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+    .btn-white {
+      background: #fff;
+      color: var(--primary);
+      font-weight: 700;
+    }
+    .btn-white:hover {
+      background: var(--primary);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+    .btn-whatsapp {
+      background: #0179BD;
+      color: #fff;
+    }
+    .btn-whatsapp:hover {
+      background: #016299;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(1, 121, 189, 0.35);
+    }
+
+    /* =========================================================
+       HEADER / NAVIGATION
+    ========================================================= */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--bg-white);
+      height: var(--header-h);
+      display: flex;
+      align-items: center;
+      transition: box-shadow var(--transition);
+    }
+    header.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.12); }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+    /* Logo */
+    .logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+    .logo-img {
+      height: 48px;
+      width: auto;
+      max-width: 180px;
+      object-fit: contain;
+      display: block;
+      transition: transform var(--transition);
+    }
+    .logo:hover .logo-img {
+      transform: scale(1.03);
+    }
+    /* Nav links */
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .nav-links li a {
+      padding: 8px 14px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--text-dark);
+      border-radius: 6px;
+      transition: color var(--transition), background var(--transition);
+    }
+    .nav-links li a:hover { color: var(--primary); background: rgba(249,112,1,0.07); }
+    .nav-cta { margin-left: 12px; }
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 6px;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2.5px;
+      background: var(--text-dark);
+      border-radius: 2px;
+      transition: transform var(--transition), opacity var(--transition);
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+
+    /* =========================================================
+       MOBILE NAV
+    ========================================================= */
+    @media (max-width: 900px) {
+      .hamburger { display: flex; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: var(--header-h);
+        left: 0;
+        right: 0;
+        background: var(--bg-white);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px 24px 24px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        gap: 2px;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links li { width: 100%; }
+      .nav-links li a { display: block; padding: 10px 12px; font-size: 1rem; }
+      .nav-cta { margin: 12px 0 0 12px; width: calc(100% - 24px); text-align: center; }
+    }
+
+    /* =========================================================
+       HERO SECTION
+    ========================================================= */
+    #home {
+      position: relative;
+      min-height: calc(100vh - var(--header-h));
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    #home::before {
+      content: '';
+      position: absolute;
+      inset: -10px;
+      background: url('img/heroimage.png') center/cover no-repeat;
+      filter: blur(3px);
+      transform: scale(1.03);
+      z-index: 0;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(10, 37, 64, 0.72) 0%, rgba(1, 121, 189, 0.48) 100%);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+      max-width: 720px;
+    }
+    .hero-eyebrow {
+      display: inline-block;
+      background: rgba(249,112,1,0.9);
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 6px 18px;
+      border-radius: 50px;
+      margin-bottom: 20px;
+    }
+    .hero-title {
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    .hero-title span { color: var(--primary); }
+    .hero-subtitle {
+      font-size: clamp(0.95rem, 2vw, 1.1rem);
+      font-weight: 300;
+      opacity: 0.92;
+      margin-bottom: 36px;
+      max-width: 580px;
+      line-height: 1.8;
+    }
+    .hero-buttons { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 48px; }
+    .hero-badges { display: flex; flex-wrap: wrap; gap: 14px; }
+    .hero-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: #fff;
+      font-size: 0.85rem;
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 50px;
+    }
+    .hero-badge .check { color: #F97001; font-weight: 700; font-size: 1rem; }
+
+    /* =========================================================
+       SECTION WRAPPER STYLES
+    ========================================================= */
+    .section { padding: 80px 0; }
+    .section-alt { background: var(--bg-light); }
+
+    /* =========================================================
+       HOLIDAY PACKAGES SECTION
+    ========================================================= */
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-bottom: 24px;
+    }
+    @media (max-width: 1024px) { .packages-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px)  { .packages-grid { grid-template-columns: 1fr; } }
+
+    .pkg-card {
+      background: var(--bg-white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .pkg-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+    }
+    .pkg-img-wrap { position: relative; overflow: hidden; }
+    .pkg-img-wrap img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .pkg-card:hover .pkg-img-wrap img { transform: scale(1.06); }
+    .pkg-duration-badge {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: var(--primary);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 50px;
+    }
+    .pkg-body { padding: 20px; flex: 1; display: flex; flex-direction: column; gap: 10px; }
+    .pkg-name { font-size: 1.2rem; font-weight: 700; color: var(--secondary); }
+    .pkg-desc { font-size: 0.88rem; color: var(--text-gray); line-height: 1.6; }
+    .pkg-meta { display: flex; flex-direction: column; gap: 4px; }
+    .pkg-meta-row { display: flex; align-items: center; gap: 6px; font-size: 0.82rem; color: var(--text-gray); }
+    .pkg-meta-row .icon { font-size: 0.95rem; }
+    .pkg-price {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--secondary);
+    }
+    .pkg-price span { font-size: 0.75rem; font-weight: 400; color: var(--text-gray); }
+    .pkg-attractions { display: flex; flex-wrap: wrap; gap: 6px; }
+    .pkg-tag {
+      background: var(--bg-light);
+      color: var(--secondary);
+      font-size: 0.72rem;
+      font-weight: 500;
+      padding: 3px 10px;
+      border-radius: 50px;
+      border: 1px solid rgba(1,121,189,0.15);
+    }
+    .pkg-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: auto; padding-top: 8px; }
+    .pkg-actions .btn { padding: 10px 12px; font-size: 0.82rem; text-align: center; border-radius: var(--radius-sm); }
+    .packages-note { text-align: center; font-size: 0.82rem; color: var(--text-gray); margin-top: 8px; }
+
+    /* =========================================================
+       DOMESTIC TOURS SECTION
+    ========================================================= */
+    .domestic-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-bottom: 36px;
+    }
+    @media (max-width: 700px) { .domestic-grid { grid-template-columns: 1fr; } }
+
+    .dom-card {
+      background: var(--bg-white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      display: flex;
+      overflow: hidden;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .dom-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+    }
+    .dom-img-wrap { position: relative; flex-shrink: 0; }
+    .dom-img-wrap img {
+      width: 150px;
+      height: 100%;
+      min-height: 170px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    @media (max-width: 480px) { .dom-img-wrap img { width: 110px; } }
+    .dom-card:hover .dom-img-wrap img { transform: scale(1.03); }
+    .dom-duration-badge {
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      background: var(--secondary);
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 0 50px 50px 0;
+    }
+    .dom-body { padding: 18px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+    .dom-name { font-size: 1.05rem; font-weight: 700; color: var(--secondary); }
+    .dom-desc { font-size: 0.82rem; color: var(--text-gray); line-height: 1.6; }
+    .dom-price { font-size: 1rem; font-weight: 700; color: var(--secondary); }
+    .dom-price span { font-size: 0.72rem; font-weight: 400; color: var(--text-gray); }
+    .dom-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+    .dom-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: auto; }
+    .dom-actions .btn { padding: 8px 14px; font-size: 0.78rem; border-radius: var(--radius-sm); }
+    .domestic-cta { text-align: center; }
+
+    /* =========================================================
+       WHY CHOOSE US SECTION
+    ========================================================= */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 900px)  { .why-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 480px)  { .why-grid { grid-template-columns: 1fr; } }
+
+    .why-card {
+      background: var(--bg-white);
+      border-radius: var(--radius);
+      padding: 32px 24px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .why-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+    }
+    .why-icon { font-size: 2.4rem; margin-bottom: 16px; }
+    .why-title { font-size: 1.05rem; font-weight: 700; color: var(--secondary); margin-bottom: 8px; }
+    .why-desc { font-size: 0.85rem; color: var(--text-gray); line-height: 1.65; }
+
+    /* =========================================================
+       ABOUT US SECTION
+    ========================================================= */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    @media (max-width: 800px) {
+      .about-grid { grid-template-columns: 1fr; gap: 36px; }
+      .about-img-wrap { order: -1; }
+    }
+    .about-eyebrow {
+      display: inline-block;
+      background: rgba(249,112,1,0.1);
+      color: var(--primary);
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 6px 16px;
+      border-radius: 50px;
+      margin-bottom: 16px;
+    }
+    .about-title { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; color: var(--secondary); margin-bottom: 16px; }
+    .about-desc { font-size: 0.95rem; color: var(--text-gray); line-height: 1.8; margin-bottom: 20px; }
+    .about-services { display: flex; flex-direction: column; gap: 10px; margin-bottom: 32px; }
+    .about-service-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.9rem;
+      color: var(--text-dark);
+    }
+    .about-service-item .check-icon {
+      width: 22px;
+      height: 22px;
+      background: rgba(249,112,1,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      font-size: 0.75rem;
+      flex-shrink: 0;
+    }
+    .about-img-wrap { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-hover); }
+    .about-img-wrap img { width: 100%; height: 420px; object-fit: cover; }
+    @media (max-width: 600px) { .about-img-wrap img { height: 260px; } }
+
+    /* =========================================================
+       SPECIAL OFFERS BANNER
+    ========================================================= */
+    #offers {
+      background: linear-gradient(135deg, #F97001 0%, #d95f00 60%, #b84e00 100%);
+      padding: 70px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    #offers::before {
+      content: '✈';
+      position: absolute;
+      font-size: 300px;
+      opacity: 0.05;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .offers-title { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 700; color: #fff; margin-bottom: 16px; }
+    .offers-desc { font-size: 1rem; color: rgba(255,255,255,0.88); margin-bottom: 36px; max-width: 540px; margin-left: auto; margin-right: auto; }
+
+    /* =========================================================
+       TESTIMONIALS SECTION
+    ========================================================= */
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 20px;
+    }
+    @media (max-width: 900px) { .testi-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 580px) { .testi-grid { grid-template-columns: 1fr; } }
+
+    .testi-card {
+      background: var(--bg-white);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      border-top: 4px solid var(--primary);
+      transition: transform var(--transition);
+    }
+    .testi-card:hover { transform: translateY(-4px); }
+    .testi-stars { color: #F5A623; font-size: 1.1rem; letter-spacing: 2px; }
+    .testi-quote {
+      font-size: 1.4rem;
+      color: var(--primary);
+      opacity: 0.5;
+      line-height: 1;
+    }
+    .testi-text { font-size: 0.88rem; color: var(--text-gray); line-height: 1.75; font-style: italic; }
+    .testi-footer { display: flex; align-items: center; gap: 12px; margin-top: auto; }
+    .testi-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--bg-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      border: 2px solid var(--primary);
+    }
+    .testi-name { font-weight: 700; font-size: 0.9rem; color: var(--text-dark); }
+    .testi-dest { font-size: 0.78rem; color: var(--text-gray); }
+    .testi-note { text-align: center; font-size: 0.8rem; color: var(--text-gray); }
+
+    /* =========================================================
+       CONTACT SECTION
+    ========================================================= */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 48px;
+      align-items: flex-start;
+    }
+    @media (max-width: 800px) { .contact-grid { grid-template-columns: 1fr; } }
+
+    /* Form */
+    .contact-form-wrap { background: var(--bg-white); border-radius: var(--radius); padding: 36px; box-shadow: var(--shadow); }
+    .contact-form-title { font-size: 1.3rem; font-weight: 700; margin-bottom: 24px; color: var(--secondary); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media (max-width: 540px) { .form-row { grid-template-columns: 1fr; } }
+    .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+    .form-group label { font-size: 0.85rem; font-weight: 600; color: var(--text-dark); }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 12px 14px;
+      border: 1.5px solid #E5E7EB;
+      border-radius: var(--radius-sm);
+      font-family: inherit;
+      font-size: 0.9rem;
+      color: var(--text-dark);
+      background: var(--bg-white);
+      transition: border-color var(--transition), box-shadow var(--transition);
+      outline: none;
+      width: 100%;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(249,112,1,0.1);
+    }
+    .form-group textarea { resize: vertical; min-height: 110px; }
+    .form-error { font-size: 0.78rem; color: #ef4444; display: none; }
+    .form-group.has-error input,
+    .form-group.has-error select,
+    .form-group.has-error textarea { border-color: #ef4444; }
+    .form-group.has-error .form-error { display: block; }
+    .form-submit { width: 100%; padding: 14px; font-size: 1rem; border-radius: var(--radius-sm); }
+    .form-success {
+      display: none;
+      background: #F0F7FC;
+      border: 1.5px solid #0179BD;
+      border-radius: var(--radius-sm);
+      padding: 20px;
+      margin-top: 20px;
+      color: #0A2540;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+    .form-success strong {
+      color: #F97001;
+    }
+    .form-success strong { display: block; font-size: 1rem; margin-bottom: 6px; }
+
+    /* Contact Info */
+    .contact-info-wrap { display: flex; flex-direction: column; gap: 24px; }
+    .contact-info-title { font-size: 1.3rem; font-weight: 700; color: var(--text-dark); margin-bottom: 8px; }
+    .contact-info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 18px;
+      background: var(--bg-white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .contact-info-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-sm);
+      background: rgba(249,112,1,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    .contact-info-label { font-size: 0.75rem; font-weight: 600; color: var(--text-gray); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px; }
+    .contact-info-value { font-size: 0.9rem; font-weight: 600; color: var(--text-dark); }
+    .contact-wa-btn { margin-top: 8px; }
+    .map-embed {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(1, 121, 189, 0.15);
+      line-height: 0;
+    }
+    .map-embed iframe {
+      width: 100%;
+      height: 260px;
+      border: 0;
+      display: block;
+    }
+
+    /* =========================================================
+       HORIZONTAL QUICK CONTACT BAR
+    ========================================================= */
+    .quick-contact-section {
+      padding: 60px 0 0 0;
+      background: var(--bg-light);
+    }
+    .quick-contact-box {
+      background: var(--bg-white);
+      border-radius: var(--radius);
+      box-shadow: 0 6px 28px rgba(1, 121, 189, 0.09);
+      border: 1px solid rgba(1, 121, 189, 0.12);
+      padding: 24px 30px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .qc-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 14px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      transition: all var(--transition);
+      border: 1px solid transparent;
+      background: var(--bg-white);
+    }
+    .qc-item:hover {
+      background: rgba(1, 121, 189, 0.05);
+      border-color: rgba(1, 121, 189, 0.2);
+      transform: translateY(-3px);
+      box-shadow: 0 4px 14px rgba(1, 121, 189, 0.1);
+    }
+    .qc-icon-wrap {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: transform var(--transition);
+    }
+    .qc-item:hover .qc-icon-wrap {
+      transform: scale(1.1);
+    }
+    .qc-icon-wrap.qc-call {
+      background: rgba(249, 112, 1, 0.12);
+      color: #F97001;
+    }
+    .qc-icon-wrap.qc-insta {
+      background: rgba(225, 48, 108, 0.12);
+      color: #E1306C;
+    }
+    .qc-icon-wrap.qc-map {
+      background: rgba(1, 121, 189, 0.12);
+      color: #0179BD;
+    }
+    .qc-icon-wrap.qc-wa {
+      background: rgba(1, 121, 189, 0.12);
+      color: #0179BD;
+    }
+    .qc-icon-wrap svg {
+      width: 22px;
+      height: 22px;
+    }
+    .qc-text {
+      display: flex;
+      flex-direction: column;
+    }
+    .qc-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-gray);
+      margin-bottom: 2px;
+    }
+    .qc-action {
+      font-size: 0.96rem;
+      font-weight: 700;
+      color: #0A2540;
+      transition: color var(--transition);
+    }
+    .qc-item:hover .qc-action {
+      color: #0179BD;
+    }
+    @media (max-width: 900px) {
+      .quick-contact-box {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+        padding: 20px;
+      }
+    }
+    @media (max-width: 480px) {
+      .qc-item {
+        padding: 12px;
+        gap: 12px;
+      }
+      .qc-icon-wrap {
+        width: 42px;
+        height: 42px;
+      }
+      .qc-action {
+        font-size: 0.88rem;
+      }
+    }
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+    footer {
+      background: var(--text-dark);
+      color: rgba(255,255,255,0.75);
+      padding: 64px 0 0;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 48px;
+    }
+    @media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 540px) { .footer-grid { grid-template-columns: 1fr; } }
+
+    .footer-logo {
+      margin-bottom: 14px;
+      display: inline-block;
+    }
+    .footer-logo-img {
+      height: 48px;
+      width: auto;
+      max-width: 180px;
+      object-fit: contain;
+      display: block;
+      background: #ffffff;
+      padding: 6px 12px;
+      border-radius: 8px;
+    }
+    .footer-desc { font-size: 0.85rem; line-height: 1.75; margin-bottom: 20px; }
+    .footer-social { display: flex; gap: 10px; }
+    .social-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background var(--transition), transform var(--transition);
+      font-size: 1rem;
+    }
+    .social-btn:hover { background: var(--primary); transform: translateY(-2px); }
+    .footer-col-title { font-size: 0.95rem; font-weight: 700; color: #fff; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid rgba(255,255,255,0.08); }
+    .footer-links { display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a { font-size: 0.85rem; color: rgba(255,255,255,0.65); transition: color var(--transition); }
+    .footer-links a:hover { color: var(--primary); }
+    .footer-contact-item { display: flex; align-items: flex-start; gap: 10px; font-size: 0.85rem; margin-bottom: 12px; }
+    .footer-contact-item .ficon { margin-top: 2px; font-size: 1rem; flex-shrink: 0; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 20px 0;
+    }
+    .footer-bottom-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 0.8rem;
+    }
+    .footer-bottom a { color: rgba(255,255,255,0.5); transition: color var(--transition); }
+    .footer-bottom a:hover { color: var(--primary); }
+    .footer-bottom-links { display: flex; gap: 20px; }
+
+    /* =========================================================
+       FLOATING WHATSAPP BUTTON
+    ========================================================= */
+    .float-whatsapp {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #0179BD 0%, #015f94 100%);
+      box-shadow: 0 4px 20px rgba(1, 121, 189, 0.45);
+      transition: transform var(--transition), box-shadow var(--transition);
+      animation: float-pulse 2s infinite;
+    }
+    .float-whatsapp:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 32px rgba(1, 121, 189, 0.6);
+    }
+    .float-whatsapp svg { width: 30px; height: 30px; }
+    @keyframes float-pulse {
+      0%, 100% { box-shadow: 0 4px 20px rgba(1, 121, 189, 0.45); }
+      50%       { box-shadow: 0 4px 32px rgba(249, 112, 1, 0.55); }
+    }
+
+    /* =========================================================
+       SCROLL-TO-TOP (BONUS)
+    ========================================================= */
+    .scroll-top {
+      position: fixed;
+      bottom: 100px;
+      right: 28px;
+      z-index: 998;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--secondary);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 16px rgba(1,121,189,0.3);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity var(--transition), transform var(--transition);
+    }
+    .scroll-top.visible { opacity: 1; pointer-events: all; }
+    .scroll-top:hover { transform: translateY(-3px); }
+  </style>
+</head>
+<body>
+
+  <!-- =========================================================
+       STICKY HEADER / NAVIGATION
+  ========================================================= -->
+  <header id="main-header">
+    <div class="container">
+      <nav class="nav-inner" aria-label="Main navigation">
+        <!-- Logo -->
+        <a href="#home" class="logo" aria-label="Vansham Holidays Home">
+          <img src="img/logo.png" alt="Vansham Holidays Logo" class="logo-img" />
+        </a>
+
+        <!-- Hamburger button (mobile) -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- Nav links -->
+        <ul class="nav-links" id="nav-links" role="list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#packages">Holiday Packages</a></li>
+          <li><a href="#packages">International Tours</a></li>
+          <li><a href="#domestic">Domestic Tours</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li class="nav-cta">
+            <a href="#contact" class="btn btn-primary">Enquire Now</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- =========================================================
+         HERO SECTION
+    ========================================================= -->
+    <section id="home" aria-label="Hero">
+      <div class="hero-overlay"></div>
+      <div class="container">
+        <div class="hero-content">
+          <span class="hero-eyebrow">Explore the World, Create Memories.</span>
+          <h1 class="hero-title">Your Journey <span>Begins</span> With Us</h1>
+          <p class="hero-subtitle">
+            Discover amazing destinations, unforgettable experiences and specially curated
+            holiday packages with Vansham Holidays.
+          </p>
+          <div class="hero-buttons">
+            <a href="#packages" class="btn btn-primary">🗺 Explore Packages</a>
+            <a href="https://wa.me/917405372435?text=Hello%20Vansham%20Holidays%2C%20I%20am%20interested%20in%20your%20holiday%20packages.%20Please%20share%20package%20details%20and%20pricing."
+               class="btn btn-whatsapp" target="_blank" rel="noopener">
+              💬 Contact on WhatsApp
+            </a>
+          </div>
+          <div class="hero-badges">
+            <div class="hero-badge"><span class="check">✓</span> Best Holiday Deals</div>
+            <div class="hero-badge"><span class="check">✓</span> Customized Tours</div>
+            <div class="hero-badge"><span class="check">✓</span> Trusted Travel Assistance</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         HOLIDAY PACKAGES SECTION
+    ========================================================= -->
+    <section class="section" id="packages" aria-label="Holiday Packages">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Popular Holiday Packages</h2>
+          <div class="accent-line"></div>
+          <p class="section-subtitle">Handpicked destinations for the perfect getaway — explore our most loved holiday packages.</p>
+        </div>
+
+        <div class="packages-grid">
+
+          <!-- Card 1: Goa -->
+          <article class="pkg-card">
+            <div class="pkg-img-wrap">
+              <img src="https://source.unsplash.com/800x600/?goa,beach" alt="Goa Beach" loading="lazy" />
+              <span class="pkg-duration-badge">4N / 5D</span>
+            </div>
+            <div class="pkg-body">
+              <h3 class="pkg-name">Goa</h3>
+              <p class="pkg-desc">Sun, sand, and endless fun! Enjoy Goa's vibrant beaches, water sports, and lively nightlife in a perfect tropical escape.</p>
+              <div class="pkg-meta">
+                <div class="pkg-meta-row"><span class="icon">🗓</span> Best Time: Oct – Mar</div>
+                <div class="pkg-price">₹12,999 <span>/ Person*</span></div>
+              </div>
+              <div class="pkg-attractions">
+                <span class="pkg-tag">Beaches</span>
+                <span class="pkg-tag">Water Sports</span>
+                <span class="pkg-tag">Nightlife</span>
+                <span class="pkg-tag">Fort Aguada</span>
+              </div>
+              <div class="pkg-actions">
+                <a href="#contact" class="btn btn-outline">View Details</a>
+                <a href="https://wa.me/917405372435?text=Hello%20Vansham%20Holidays%2C%20I%20am%20interested%20in%20your%20Goa%20holiday%20package.%20Please%20share%20package%20details%20and%20pricing."
+                   class="btn btn-whatsapp" target="_blank" rel="noopener">💬 Enquire</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Malaysia -->
+          <article class="pkg-card">
+            <div class="pkg-img-wrap">
+              <img src="https://source.unsplash.com/800x600/?malaysia,kuala-lumpur" alt="Malaysia" loading="lazy" />
+              <span class="pkg-duration-badge">5N / 6D</span>
+            </div>
+            <div class="pkg-body">
+              <h3 class="pkg-name">Malaysia</h3>
+              <p class="pkg-desc">Explore the iconic twin towers, misty highlands, and pristine island beaches of multicultural Malaysia.</p>
+              <div class="pkg-meta">
+                <div class="pkg-meta-row"><span class="icon">🗓</span> Best Time: Mar – Oct</div>
+                <div class="pkg-price">₹35,999 <span>/ Person*</span></div>
+              </div>
+              <div class="pkg-attractions">
+                <span class="pkg-tag">KLCC</span>
+                <span class="pkg-tag">Genting Highlands</span>
+                <span class="pkg-tag">Batu Caves</span>
+                <span class="pkg-tag">Langkawi</span>
+              </div>
+              <div class="pkg-actions">
+                <a href="#contact" class="btn btn-outline">View Details</a>
+                <a href="https://wa.me/917405372435?text=Hello%20Vansham%20Holidays%2C%20I%20am%20interested%20in%20your%20Malaysia%20holiday%20package.%20Please%20share%20package%20details%20and%20pricing."
+                   class="btn btn-whatsapp" target="_blank" rel="noopener">💬 Enquire</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Singapore -->
+          <article class="pkg-card">
+            <div class="pkg-img-wrap">
+              <img src="https://source.unsplash.com/800x600/?singapore,marina-bay" alt="Singapore" loading="lazy" />
+              <span class="pkg-duration-badge">5N / 6D</span>
+            </div>
+            <div class="pkg-body">
+              <h3 class="pkg-name">Singapore</h3>
+              <p class="pkg-desc">Experience the dazzling city-state blending futuristic skylines, world-class attractions, and extraordinary cuisine.</p>
+              <div class="pkg-meta">
+                <div class="pkg-meta-row"><span class="icon">🗓</span> Best Time: Feb – Apr</div>
+                <div class="pkg-price">₹49,999 <span>/ Person*</span></div>
+              </div>
+              <div class="pkg-attractions">
+                <span class="pkg-tag">Marina Bay Sands</span>
+                <span class="pkg-tag">Universal Studios</span>
+                <span class="pkg-tag">Gardens by the Bay</span>
+                <span class="pkg-tag">Sentosa</span>
+              </div>
+              <div class="pkg-actions">
+                <a href="#contact" class="btn btn-outline">View Details</a>
+                <a href="https://wa.me/917405372435?text=Hello%20Vansham%20Holidays%2C%20I%20am%20interested%20in%20your%20Singapore%20holiday%20package.%20Please%20share%20package%20details%20and%20pricing."
+                   class="btn btn-whatsapp" target="_blank" rel="noopener">💬 Enquire</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: Kerala -->
+          <article class="pkg-card">
+            <div class="pkg-img-wrap">
+              <img src="https://source.unsplash.com/800x600/?kerala,backwaters" alt="Kerala Backwaters" loading="lazy" />
+              <span class="pkg-duration-badge">5N / 6D</span>
+            </div>
+            <div class="pkg-body">
+              <h3 class="pkg-name">Kerala</h3>
+              <p class="pkg-desc">Drift through serene backwaters, stroll through misty tea estates, and soak in Kerala's lush tropical splendour.</p>
+              <div class="pkg-meta">
+                <div class="pkg-meta-row"><span class="icon">🗓</span> Best Time: Sep – Mar</div>
+                <div class="pkg-price">₹18,999 <span>/ Person*</span></div>
+              </div>
+              <div class="pkg-attractions">
+                <span class="pkg-tag">Munnar Tea Gardens</span>
+                <span class="pkg-tag">Alleppey Houseboats</span>
+                <span class="pkg-tag">Backwaters</span>
+                <span class="pkg-tag">Wayanad</span>
+              </div>
+              <div class="pkg-actions">
+                <a href="#contact" class="btn btn-outline">View Details</a>
+                <a href="https://wa.me/917405372435?text=Hello%20Vansham%20Holidays%2C%20I%20am%20interested%20in%20your%20Kerala%20holiday%20package.%20Please%20share%20package%20details%20and%20pricing."
+                   class="btn btn-whatsapp" target="_blank" rel="noopener">💬 Enquire</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5: Thailand -->
+          <article class="pkg-card">
+            <div class="pkg-img-wrap">
+              <img src="https://source.unsplash.com/800x600/?thailand,phuket,beach" alt="Thailand" loading="lazy" />
+              <span class="pkg-duration-badge">5N / 6D</span>
+            </div>
+            <div class="pkg-body">
+              <h3 class="pkg-name">Thailand</h3>
+              <p class="pkg-desc">From Bangkok's ancient temples to Phuket's turquoise shores, Thailand promises an adventure like no other.</p>
+              <div class="pkg-meta">
+                <div class="pkg-meta-row"><span class="icon">🗓</span> Best Time: Nov – Apr</div>
+                <div class="pkg-price">₹28,999 <span>/ Person*</span></div>
+              </div>
+              <div class="pkg-attractions">
+                <span class="pkg-tag">Bangkok Temples</span>
+                <span class="pkg-tag">Phuket Beaches</span>
+                <span class="pkg-tag">Krabi</span>
+                <span class="pkg-tag">Phi Phi Islands</span>
+              </div>
+              <div class="pkg-actions">
+                <a href="#contact" class="btn btn-outline">View Details</a>
+                <a href="https://wa.me/917405372435?text=Hello%20Vansham%20Holidays%2C%20I%20am%20interested%20in%20your%20Thailand%20holiday%20package.%20Please%20share%20package%20details%20and%20pricing."
+                   class="btn btn-whatsapp" target="_blank" rel="noopener">💬 Enquire</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6: Kashmir -->
+          <article class="pkg-card">
+            <div class="pkg-img-wrap">
+              <img src="https://source.unsplash.com/800x600/?kashmir,dal-lake" alt="Kashmir Dal Lake" loading="lazy" />
+              <span class="pkg-duration-badge">6N / 7D</span>
+            </div>
+            <div class="pkg-body">
+              <h3 class="pkg-name">Kashmir</h3>
+              <p class="pkg-desc">Dubbed "Paradise on Earth," Kashmir mesmerises with its snow-capped peaks, shimmering lakes, and blooming meadows.</p>
+              <div class="pkg-meta">
+                <div class="pkg-meta-row"><span class="icon">🗓</span> Best Time: Apr – Oct</div>
+                <div class="pkg-price">₹24,999 <span>/ Person*</span></div>
+              </div>
+              <div class="pkg-attractions">
+                <span class="pkg-tag">Srinagar Dal Lake</span>
+                <span class="pkg-tag">Gulmarg</span>
+                <span class="pkg-tag">Pahalgam</span>
+                <span class="pkg-tag">Betaab Valley</span>
+              </div>
+              <div class="pkg-actions">
+                <a href="#contact" class="btn btn-outline">View Details</a>
+                <a href="https://wa.me/917405372435?text=Hello%20Vansham%20Holidays%2C%20I%20am%20interested%20in%20your%20Kashmir%20holiday%20package.%20Please%20share%20package%20details%20and%20pricing."
+                   class="btn btn-whatsapp" target="_blank" rel="noopener">💬 Enquire</a>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- /packages-grid -->
+        <p class="packages-note">* Prices are sample placeholders. Contact us for actual quotes.</p>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         DOMESTIC TOURS SECTION
+    ========================================================= -->
+    <section class="section section-alt" id="domestic" aria-label="Popular Indian Destinations">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Popular Indian Destinations</h2>
+          <div class="accent-line"></div>
+          <p class="section-subtitle">Explore the incredible diversity of India — from sacred peaks to royal deserts.</p>
+        </div>
+
+        <div class="domestic-grid">
+
+          <!-- Kedarnath -->
+          <article class="dom-card">
+            <div class="dom-img-wrap">
+              <img src="https://source.unsplash.com/400x300/?kedarnath,temple,himalaya" alt="Kedarnath Temple" loading="lazy" />
+              <span class="dom-duration-badge">4N / 5D</span>
+            </div>
+            <div class="dom-body">
+              <h3 class="dom-name">Kedarnath</h3>
+              <p class="dom-desc">Embark on a spiritual and scenic journey to the revered Kedarnath temple nestled in the majestic Himalayas.</p>
+              <div class="dom-price">₹15,999 <span>/ Person*</span></div>
+              <div class="dom-tags">
+                <span class="pkg-tag">🗓 May–Jun, Sep–Oct</span>
+                <span class="pkg-tag">Kedarnath Temple</span>
+                <span class="pkg-tag">Himalayan Trek</span>
+              </div>
+              <div class="dom-actions">
+                <a href="#contact" class="btn btn-outline">View Details</a>
+                <a href="https://wa.me/917405372435?text=Hello%20Vansham%20Holidays%2C%20I%20am%20interested%20in%20your%20Kedarnath%20holiday%20package.%20Please%20share%20package%20details%20and%20pricing."
+                   class="btn btn-whatsapp" target="_blank" rel="noopener">💬 Enquire</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Manali -->
+          <article class="dom-card">
+            <div class="dom-img-wrap">
+              <img src="https://source.unsplash.com/400x300/?manali,mountains,snow" alt="Manali" loading="lazy" />
+              <span class="dom-duration-badge">4N / 5D</span>
+            </div>
+            <div class="dom-body">
+              <h3 class="dom-name">Manali</h3>
+              <p class="dom-desc">From snow-covered Rohtang Pass to the vibrant Kullu valley, Manali is every adventure lover's dream destination.</p>
+              <div class="dom-price">₹14,999 <span>/ Person*</span></div>
+              <div class="dom-tags">
+                <span class="pkg-tag">🗓 Mar–Jun, Oct–Nov</span>
+                <span class="pkg-tag">Rohtang Pass</span>
+                <span class="pkg-tag">Solang Valley</span>
+              </div>
+              <div class="dom-actions">
+                <a href="#contact" class="btn btn-outline">View Details</a>
+                <a href="https://wa.me/917405372435?text=Hello%20Vansham%20Holidays%2C%20I%20am%20interested%20in%20your%20Manali%20holiday%20package.%20Please%20share%20package%20details%20and%20pricing."
+                   class="btn btn-whatsapp" target="_blank" rel="noopener">💬 Enquire</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Shimla -->
+          <article class="dom-card">
+            <div class="dom-img-wrap">
+              <img src="https://source.unsplash.com/400x300/?shimla,hill-station,india" alt="Shimla" loading="lazy" />
+              <span class="dom-duration-badge">3N / 4D</span>
+            </div>
+            <div class="dom-body">
+              <h3 class="dom-name">Shimla</h3>
+              <p class="dom-desc">The Queen of Hills awaits with colonial charm, pine-scented air, scenic toy trains, and breathtaking Himalayan views.</p>
+              <div class="dom-price">₹10,999 <span>/ Person*</span></div>
+              <div class="dom-tags">
+                <span class="pkg-tag">🗓 Mar–Jun</span>
+                <span class="pkg-tag">Mall Road</span>
+                <span class="pkg-tag">Toy Train</span>
+              </div>
+              <div class="dom-actions">
+                <a href="#contact" class="btn btn-outline">View Details</a>
+                <a href="https://wa.me/917405372435?text=Hello%20Vansham%20Holidays%2C%20I%20am%20interested%20in%20your%20Shimla%20holiday%20package.%20Please%20share%20package%20details%20and%20pricing."
+                   class="btn btn-whatsapp" target="_blank" rel="noopener">💬 Enquire</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Rajasthan -->
+          <article class="dom-card">
+            <div class="dom-img-wrap">
+              <img src="https://source.unsplash.com/400x300/?rajasthan,jaipur,fort" alt="Rajasthan" loading="lazy" />
+              <span class="dom-duration-badge">6N / 7D</span>
+            </div>
+            <div class="dom-body">
+              <h3 class="dom-name">Rajasthan</h3>
+              <p class="dom-desc">Step into a royal world of magnificent forts, shimmering desert sands, vibrant culture, and timeless Rajput splendour.</p>
+              <div class="dom-price">₹18,999 <span>/ Person*</span></div>
+              <div class="dom-tags">
+                <span class="pkg-tag">🗓 Oct–Mar</span>
+                <span class="pkg-tag">Jaipur Forts</span>
+                <span class="pkg-tag">Jaisalmer Desert</span>
+              </div>
+              <div class="dom-actions">
+                <a href="#contact" class="btn btn-outline">View Details</a>
+                <a href="https://wa.me/917405372435?text=Hello%20Vansham%20Holidays%2C%20I%20am%20interested%20in%20your%20Rajasthan%20holiday%20package.%20Please%20share%20package%20details%20and%20pricing."
+                   class="btn btn-whatsapp" target="_blank" rel="noopener">💬 Enquire</a>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- /domestic-grid -->
+        <p class="packages-note" style="margin-bottom:36px;">* Prices are sample placeholders. Contact us for actual quotes.</p>
+        <div class="domestic-cta">
+          <a href="#contact" class="btn btn-secondary">View All Packages</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         WHY CHOOSE US SECTION
+    ========================================================= -->
+    <section class="section" id="why-us" aria-label="Why Choose Vansham Holidays">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Why Choose Vansham Holidays?</h2>
+          <div class="accent-line"></div>
+          <p class="section-subtitle">We make your travel dreams a reality with care, expertise, and dedication.</p>
+        </div>
+        <div class="why-grid">
+
+          <div class="why-card">
+            <div class="why-icon">🎯</div>
+            <h3 class="why-title">Customized Holiday Packages</h3>
+            <p class="why-desc">Every trip is tailored to your preferences, budget, and travel style — no two journeys are the same.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon">💰</div>
+            <h3 class="why-title">Affordable Travel Deals</h3>
+            <p class="why-desc">We work hard to bring you the best value for your budget, so you can travel more without overspending.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon">📞</div>
+            <h3 class="why-title">Dedicated Customer Support</h3>
+            <p class="why-desc">Our travel experts are available to assist you at every step of your journey — before, during, and after.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon">✈️</div>
+            <h3 class="why-title">Hassle-Free Travel Planning</h3>
+            <p class="why-desc">From itinerary planning to accommodation and transfers — we handle the details so you can focus on the joy of travel.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         ABOUT US SECTION
+    ========================================================= -->
+    <section class="section section-alt" id="about" aria-label="About Vansham Holidays">
+      <div class="container">
+        <div class="about-grid">
+          <!-- Text -->
+          <div>
+            <span class="about-eyebrow">About Us</span>
+            <h2 class="about-title">Travel More, Worry Less</h2>
+            <p class="about-desc">
+              Vansham Holidays is a passionate travel agency dedicated to crafting memorable journeys across
+              India and around the world. We specialise in both domestic and international holiday packages,
+              offering seamless end-to-end travel experiences for individuals, couples, families, and groups.
+            </p>
+            <p class="about-desc">
+              Whether you're dreaming of a tranquil backwater cruise in Kerala, a snow-capped adventure in
+              Kashmir, or an international escapade to Singapore or Thailand — our team of travel experts is
+              here to make it happen, with personalised attention and competitive pricing.
+            </p>
+            <div class="about-services">
+              <div class="about-service-item">
+                <div class="check-icon">✓</div>
+                <span>Personalized Travel Planning</span>
+              </div>
+              <div class="about-service-item">
+                <div class="check-icon">✓</div>
+                <span>Family Vacations</span>
+              </div>
+              <div class="about-service-item">
+                <div class="check-icon">✓</div>
+                <span>Honeymoon Packages</span>
+              </div>
+              <div class="about-service-item">
+                <div class="check-icon">✓</div>
+                <span>Group Tours</span>
+              </div>
+            </div>
+            <a href="#contact" class="btn btn-primary">Contact Us</a>
+          </div>
+          <!-- Image -->
+          <div class="about-img-wrap">
+            <img src="https://source.unsplash.com/700x500/?travel,adventure,couple,vacation" alt="Happy travellers on vacation" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SPECIAL OFFERS BANNER
+    ========================================================= -->
+    <section id="offers" aria-label="Special Offers">
+      <div class="container" style="position:relative;z-index:2;">
+        <h2 class="offers-title">Plan Your Dream Holiday Today!</h2>
+        <p class="offers-desc">Explore amazing destinations with exciting holiday packages curated just for you.</p>
+        <a href="#contact" class="btn btn-white">Enquire Now →</a>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         TESTIMONIALS SECTION
+    ========================================================= -->
+    <section class="section" id="testimonials" aria-label="Testimonials">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">What Our Travellers Say</h2>
+          <div class="accent-line"></div>
+          <p class="section-subtitle">Hear from some of the happy travellers who explored the world with us.</p>
+        </div>
+        <div class="testi-grid">
+
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <div class="testi-quote">"</div>
+            <p class="testi-text">
+              The Goa trip was absolutely magical! Everything from the hotel to the sightseeing was
+              perfectly arranged. Vansham Holidays made our family vacation completely stress-free and memorable.
+            </p>
+            <div class="testi-footer">
+              <div class="testi-avatar">👨‍👩‍👧</div>
+              <div>
+                <div class="testi-name">Rahul & Family</div>
+                <div class="testi-dest">Goa Holiday Package</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <div class="testi-quote">"</div>
+            <p class="testi-text">
+              We booked our honeymoon package to Kerala through Vansham Holidays and it was beyond our
+              expectations. The houseboat experience on the backwaters was truly unforgettable!
+            </p>
+            <div class="testi-footer">
+              <div class="testi-avatar">💑</div>
+              <div>
+                <div class="testi-name">Priya & Arjun</div>
+                <div class="testi-dest">Kerala Honeymoon Package</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-card">
+            <div class="testi-stars">★★★★☆</div>
+            <div class="testi-quote">"</div>
+            <p class="testi-text">
+              Singapore was incredible! The team at Vansham Holidays planned every detail perfectly —
+              from Universal Studios to Gardens by the Bay. Great value and excellent support throughout.
+            </p>
+            <div class="testi-footer">
+              <div class="testi-avatar">🧳</div>
+              <div>
+                <div class="testi-name">Sneha Mehta</div>
+                <div class="testi-dest">Singapore Tour Package</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <p class="testi-note">* These are sample reviews. Real customer reviews will be added soon.</p>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         HORIZONTAL QUICK CONTACT SECTION
+    ========================================================= -->
+    <section class="quick-contact-section" aria-label="Quick Connect Options">
+      <div class="container">
+        <div class="quick-contact-box">
+
+          <!-- 1. Call Us -->
+          <a href="tel:+917405372435" class="qc-item" aria-label="Call Vansham Holidays at +91 74053 72435">
+            <div class="qc-icon-wrap qc-call">
+              <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+            <div class="qc-text">
+              <span class="qc-label">Call Us</span>
+              <span class="qc-action">+91 74053 72435</span>
+            </div>
+          </a>
+
+          <!-- 2. Instagram -->
+          <a href="https://www.instagram.com/vansham_holidays/" class="qc-item" target="_blank" rel="noopener" aria-label="Follow Vansham Holidays on Instagram">
+            <div class="qc-icon-wrap qc-insta">
+              <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </div>
+            <div class="qc-text">
+              <span class="qc-label">Follow Us</span>
+              <span class="qc-action">@vansham_holidays</span>
+            </div>
+          </a>
+
+          <!-- 3. Google Maps -->
+          <a href="https://maps.google.com/?cid=17476837943579898484" class="qc-item" target="_blank" rel="noopener" aria-label="Find Vansham Holidays on Google Maps">
+            <div class="qc-icon-wrap qc-map">
+              <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div class="qc-text">
+              <span class="qc-label">Find Us</span>
+              <span class="qc-action">Western Arena, Surat</span>
+            </div>
+          </a>
+
+          <!-- 4. WhatsApp -->
+          <a href="https://wa.me/917405372435?text=Hello%20Vansham%20Holidays%2C%20I%20would%20like%20to%20know%20more%20about%20your%20holiday%20packages." class="qc-item" target="_blank" rel="noopener" aria-label="Chat with Vansham Holidays on WhatsApp">
+            <div class="qc-icon-wrap qc-wa">
+              <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+              </svg>
+            </div>
+            <div class="qc-text">
+              <span class="qc-label">WhatsApp Us</span>
+              <span class="qc-action">Chat on WhatsApp</span>
+            </div>
+          </a>
+
+        </div><!-- /quick-contact-box -->
+      </div>
+    </section>
+
+    <!-- =========================================================
+         CONTACT SECTION
+    ========================================================= -->
+    <section class="section section-alt" id="contact" aria-label="Contact Us">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Get In Touch</h2>
+          <div class="accent-line"></div>
+          <p class="section-subtitle">Ready to plan your next holiday? Send us your enquiry and we'll get back to you shortly.</p>
+        </div>
+
+        <div class="contact-grid">
+
+          <!-- Enquiry Form -->
+          <div class="contact-form-wrap">
+            <h3 class="contact-form-title">Send an Enquiry</h3>
+            <form id="enquiry-form" novalidate>
+
+              <div class="form-row">
+                <div class="form-group" id="fg-name">
+                  <label for="f-name">Full Name <span style="color:var(--primary)">*</span></label>
+                  <input type="text" id="f-name" name="name" placeholder="Your full name" autocomplete="name" />
+                  <span class="form-error">Please enter your name.</span>
+                </div>
+                <div class="form-group" id="fg-mobile">
+                  <label for="f-mobile">Mobile Number <span style="color:var(--primary)">*</span></label>
+                  <input type="tel" id="f-mobile" name="mobile" placeholder="+91 74053 XXXXX" autocomplete="tel" />
+                  <span class="form-error">Enter a valid 10-digit mobile number.</span>
+                </div>
+              </div>
+
+              <div class="form-group" id="fg-email">
+                <label for="f-email">Email Address <span style="color:var(--primary)">*</span></label>
+                <input type="email" id="f-email" name="email" placeholder="you@example.com" autocomplete="email" />
+                <span class="form-error">Enter a valid email address.</span>
+              </div>
+
+              <div class="form-group" id="fg-destination">
+                <label for="f-destination">Destination Interested In <span style="color:var(--primary)">*</span></label>
+                <select id="f-destination" name="destination">
+                  <option value="" disabled selected>Select a destination…</option>
+                  <optgroup label="International">
+                    <option value="Goa">Goa</option>
+                    <option value="Malaysia">Malaysia</option>
+                    <option value="Singapore">Singapore</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Thailand">Thailand</option>
+                    <option value="Kashmir">Kashmir</option>
+                  </optgroup>
+                  <optgroup label="Domestic (India)">
+                    <option value="Kedarnath">Kedarnath</option>
+                    <option value="Manali">Manali</option>
+                    <option value="Shimla">Shimla</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                  </optgroup>
+                  <option value="Other">Other / Not sure yet</option>
+                </select>
+                <span class="form-error">Please select a destination.</span>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group" id="fg-travellers">
+                  <label for="f-travellers">Number of Travellers <span style="color:var(--primary)">*</span></label>
+                  <select id="f-travellers" name="travellers">
+                    <option value="" disabled selected>Select…</option>
+                    <option value="1">1 (Solo)</option>
+                    <option value="2">2 (Couple)</option>
+                    <option value="3-5">3–5 (Small Group)</option>
+                    <option value="6-10">6–10 (Group)</option>
+                    <option value="10+">10+ (Large Group)</option>
+                  </select>
+                  <span class="form-error">Please select number of travellers.</span>
+                </div>
+                <div class="form-group" id="fg-date">
+                  <label for="f-date">Preferred Travel Date</label>
+                  <input type="date" id="f-date" name="travel_date" />
+                </div>
+              </div>
+
+              <div class="form-group" id="fg-message">
+                <label for="f-message">Message / Special Requirements</label>
+                <textarea id="f-message" name="message" placeholder="Tell us more about your travel plans, budget, or special requirements…"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary form-submit">Submit Enquiry</button>
+
+              <!-- Success Message -->
+              <div class="form-success" id="form-success" role="alert">
+                <strong>✅ Thank you! Your enquiry has been received.</strong>
+                We'll contact you shortly. <em>Note: This form is for enquiry only and does not confirm any
+                booking. We'll reach out to you via phone or WhatsApp.</em>
+              </div>
+
+            </form>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="contact-info-wrap">
+            <h3 class="contact-info-title">Contact Information</h3>
+            <p style="font-size:0.88rem;color:var(--text-gray);margin-bottom:16px;">
+              Reach out to us directly — we'd love to help plan your perfect holiday!
+            </p>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon">📞</div>
+              <div>
+                <div class="contact-info-label">Phone</div>
+                <div class="contact-info-value"><a href="tel:+917405372435" style="color:inherit;text-decoration:none;">+91 74053 72435</a></div>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon">💬</div>
+              <div>
+                <div class="contact-info-label">WhatsApp</div>
+                <div class="contact-info-value"><a href="tel:+917405372435" style="color:inherit;text-decoration:none;">+91 74053 72435</a></div>
+                <a href="https://wa.me/917405372435?text=Hello%20Vansham%20Holidays%2C%20I%20am%20interested%20in%20your%20holiday%20packages.%20Please%20share%20package%20details%20and%20pricing."
+                   class="btn btn-whatsapp contact-wa-btn" target="_blank" rel="noopener" style="font-size:0.8rem;padding:8px 16px;border-radius:6px;">
+                  Chat on WhatsApp
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon">✉️</div>
+              <div>
+                <div class="contact-info-label">Email</div>
+                <div class="contact-info-value">info@vanshamholidays.com <span style="font-size:0.75rem;color:var(--text-gray)">(Placeholder)</span></div>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon">📍</div>
+              <div>
+                <div class="contact-info-label">Address</div>
+                <div class="contact-info-value" style="font-weight:500;line-height:1.5;">3rd floor, Shopping Centre, Western Arena, 308, Madhuvan Cir, Adajan Gam, Adajan, Surat, Gujarat 395009</div>
+              </div>
+            </div>
+
+            <!-- Google Maps Location -->
+            <div class="map-embed">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1271.5009166127197!2d72.78513422854677!3d21.19023199877618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f3be771ca83%3A0xf28a6b44cc91f274!2sVANSHAM%20HOLIDAYS!5e1!3m2!1sen!2sin!4v1794388682465!5m2!1sen!2sin" width="100%" height="260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="VANSHAM HOLIDAYS Office Location"></iframe>
+            </div>
+
+          </div><!-- /contact-info-wrap -->
+        </div><!-- /contact-grid -->
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================= -->
+  <footer aria-label="Site Footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Col 1: Brand -->
+        <div>
+          <a href="#home" class="footer-logo" aria-label="Vansham Holidays Home">
+            <img src="img/logo.png" alt="Vansham Holidays Logo" class="footer-logo-img" />
+          </a>
+          <p class="footer-desc">
+            Your trusted travel partner for domestic and international holiday packages.
+            Explore the world and create memories that last a lifetime.
+          </p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/vansham_holidays/" class="social-btn" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener">📷</a>
+            <a href="#" class="social-btn" aria-label="Facebook" title="Facebook">👍</a>
+            <a href="https://wa.me/917405372435" class="social-btn" aria-label="WhatsApp" title="WhatsApp" target="_blank" rel="noopener">💬</a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div>
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#packages">Holiday Packages</a></li>
+            <li><a href="#domestic">Domestic Tours</a></li>
+            <li><a href="#why-us">Why Choose Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Popular Destinations -->
+        <div>
+          <h4 class="footer-col-title">Popular Destinations</h4>
+          <ul class="footer-links">
+            <li><a href="#packages">Goa</a></li>
+            <li><a href="#packages">Kerala</a></li>
+            <li><a href="#packages">Kashmir</a></li>
+            <li><a href="#packages">Singapore</a></li>
+            <li><a href="#packages">Malaysia</a></li>
+            <li><a href="#packages">Thailand</a></li>
+            <li><a href="#domestic">Kedarnath</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact Info -->
+        <div>
+          <h4 class="footer-col-title">Contact Info</h4>
+          <div class="footer-contact-item">
+            <span class="ficon">📞</span>
+            <span>+91 74053 72435</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="ficon">💬</span>
+            <span>+91 74053 72435</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="ficon">✉️</span>
+            <span>info@vanshamholidays.com</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="ficon">📍</span>
+            <span>3rd floor, Shopping Centre, Western Arena, 308, Madhuvan Cir, Adajan, Surat, Gujarat 395009</span>
+          </div>
+        </div>
+
+      </div><!-- /footer-grid -->
+    </div>
+
+    <!-- Footer Bottom Bar -->
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-inner">
+          <span>© 2026 Vansham Holidays. All Rights Reserved.</span>
+          <div class="footer-bottom-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms &amp; Conditions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       FLOATING WHATSAPP BUTTON
+  ========================================================= -->
+  <a href="https://wa.me/917405372435?text=Hello%20Vansham%20Holidays%2C%20I%20am%20interested%20in%20your%20holiday%20packages.%20Please%20share%20package%20details%20and%20pricing."
+     class="float-whatsapp"
+     target="_blank"
+     rel="noopener"
+     aria-label="Chat with us on WhatsApp"
+     title="Chat on WhatsApp">
+    <!-- WhatsApp SVG Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="#ffffff" aria-hidden="true">
+      <path d="M24 4C13 4 4 13 4 24c0 3.6 1 7 2.7 10L4 44l10.3-2.7C17.1 43 20.5 44 24 44c11 0 20-9 20-20S35 4 24 4zm0 36c-3.1 0-6.1-.9-8.7-2.5l-.6-.4-6.1 1.6 1.6-5.9-.4-.6C8.9 30.1 8 27.1 8 24 8 15.2 15.2 8 24 8s16 7.2 16 16-7.2 16-16 16zm8.8-11.8c-.5-.2-2.8-1.4-3.2-1.5-.4-.2-.8-.2-1.1.2s-1.3 1.5-1.6 1.9c-.3.3-.6.4-1.1.1-.5-.2-2-.7-3.8-2.3-1.4-1.3-2.4-2.8-2.6-3.3-.3-.5 0-.7.2-1 .2-.2.5-.6.7-.9.2-.3.3-.5.4-.9.1-.3 0-.7-.1-.9-.2-.3-1.1-2.6-1.5-3.6-.4-.9-.8-.8-1.1-.8h-1c-.3 0-.8.1-1.3.6-.4.5-1.7 1.6-1.7 4s1.7 4.6 2 5c.2.3 3.4 5.2 8.3 7.3 1.2.5 2.1.8 2.8 1 1.2.4 2.2.3 3.1.2.9-.2 2.8-1.1 3.2-2.2.4-1.1.4-2 .3-2.2-.2-.2-.5-.4-1-.6z"/>
+    </svg>
+  </a>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top" id="scroll-top" aria-label="Scroll to top" title="Back to top">▲</button>
+
+  <!-- =========================================================
+       JAVASCRIPT
+  ========================================================= -->
+  <script>
+    'use strict';
+
+    // -------------------------------------------------------
+    // 1. STICKY HEADER — add shadow on scroll
+    // -------------------------------------------------------
+    (function () {
+      var header = document.getElementById('main-header');
+      function onScroll() {
+        if (window.scrollY > 10) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+    })();
+
+    // -------------------------------------------------------
+    // 2. HAMBURGER MENU TOGGLE (mobile)
+    // -------------------------------------------------------
+    (function () {
+      var hamburger = document.getElementById('hamburger');
+      var navLinks  = document.getElementById('nav-links');
+
+      hamburger.addEventListener('click', function () {
+        var isOpen = navLinks.classList.toggle('open');
+        hamburger.classList.toggle('open', isOpen);
+        hamburger.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      // Close nav when any link is clicked
+      navLinks.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          navLinks.classList.remove('open');
+          hamburger.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      // Close nav when clicking outside
+      document.addEventListener('click', function (e) {
+        if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+          navLinks.classList.remove('open');
+          hamburger.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+        }
+      });
+    })();
+
+    // -------------------------------------------------------
+    // 3. SCROLL-TO-TOP BUTTON
+    // -------------------------------------------------------
+    (function () {
+      var btn = document.getElementById('scroll-top');
+      window.addEventListener('scroll', function () {
+        btn.classList.toggle('visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // -------------------------------------------------------
+    // 4. ENQUIRY FORM VALIDATION & SUBMISSION
+    // -------------------------------------------------------
+    (function () {
+      var form    = document.getElementById('enquiry-form');
+      var success = document.getElementById('form-success');
+
+      // Helper: show or clear error state
+      function setError(groupId, hasError) {
+        var group = document.getElementById(groupId);
+        if (!group) return;
+        if (hasError) {
+          group.classList.add('has-error');
+        } else {
+          group.classList.remove('has-error');
+        }
+      }
+
+      // Validate a single field, returns true if valid
+      function validateField(id, groupId, validator) {
+        var el    = document.getElementById(id);
+        var value = el ? el.value.trim() : '';
+        var valid = validator(value);
+        setError(groupId, !valid);
+        return valid;
+      }
+
+      // Validators
+      function notEmpty(v)    { return v.length > 0; }
+      function validMobile(v) { return /^[6-9]\d{9}$/.test(v.replace(/\s+/g, '').replace(/^\+91/, '')); }
+      function validEmail(v)  { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
+
+      // Live validation on blur
+      document.getElementById('f-name').addEventListener('blur', function () {
+        validateField('f-name', 'fg-name', notEmpty);
+      });
+      document.getElementById('f-mobile').addEventListener('blur', function () {
+        validateField('f-mobile', 'fg-mobile', validMobile);
+      });
+      document.getElementById('f-email').addEventListener('blur', function () {
+        validateField('f-email', 'fg-email', validEmail);
+      });
+      document.getElementById('f-destination').addEventListener('change', function () {
+        validateField('f-destination', 'fg-destination', notEmpty);
+      });
+      document.getElementById('f-travellers').addEventListener('change', function () {
+        validateField('f-travellers', 'fg-travellers', notEmpty);
+      });
+
+      // Form submit
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        var nameOk   = validateField('f-name',        'fg-name',        notEmpty);
+        var mobOk    = validateField('f-mobile',      'fg-mobile',      validMobile);
+        var emailOk  = validateField('f-email',       'fg-email',       validEmail);
+        var destOk   = validateField('f-destination', 'fg-destination', notEmpty);
+        var travOk   = validateField('f-travellers',  'fg-travellers',  notEmpty);
+
+        if (nameOk && mobOk && emailOk && destOk && travOk) {
+          // All valid — show success message
+          success.style.display = 'block';
+          form.querySelectorAll('input, select, textarea').forEach(function (el) {
+            el.value = '';
+            if (el.tagName === 'SELECT') el.selectedIndex = 0;
+          });
+          // Scroll to success message
+          success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else {
+          // Scroll to first error
+          var firstError = form.querySelector('.has-error');
+          if (firstError) {
+            firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }
+      });
+    })();
+
+    // -------------------------------------------------------
+    // 5. ACTIVE NAV LINK HIGHLIGHT (Intersection Observer)
+    // -------------------------------------------------------
+    (function () {
+      var sections = document.querySelectorAll('section[id], main > section[id]');
+      var navItems = document.querySelectorAll('.nav-links a');
+
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            var id = entry.target.getAttribute('id');
+            navItems.forEach(function (a) {
+              var href = a.getAttribute('href');
+              if (href === '#' + id) {
+                a.style.color = 'var(--primary)';
+              } else {
+                a.style.color = '';
+              }
+            });
+          }
+        });
+      }, { rootMargin: '-50% 0px -50% 0px' });
+
+      sections.forEach(function (section) { observer.observe(section); });
+    })();
+  </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
