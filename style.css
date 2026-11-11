@@ -1,4 +1,4 @@
-﻿    /* =========================================================
+    /* =========================================================
        1. CSS CUSTOM PROPERTIES (OFFICIAL BRAND TOKENS)
     ========================================================= */
     :root {
@@ -256,7 +256,7 @@
     }
 
     header.scrolled {
-      background: rgba(21, 52, 74, 0.85);
+      background: rgba(21, 52, 74, 0.30);
       backdrop-filter: var(--glass-blur);
       -webkit-backdrop-filter: var(--glass-blur);
       box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
@@ -595,7 +595,7 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(15, 28, 48, 0.85);
+      background: rgba(15, 28, 48, 0.30);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
       border: 1px solid rgba(255, 255, 255, 0.25);
@@ -633,12 +633,12 @@
 
     /* Black with Opacity Glass Card */
     .pkg-card {
-      background: rgba(12, 24, 40, 0.82);
+      background: rgba(12, 24, 40, 0.30);
       backdrop-filter: blur(20px) saturate(180%);
       -webkit-backdrop-filter: blur(20px) saturate(180%);
       border: 1.5px solid rgba(255, 255, 255, 0.22);
       border-radius: 22px;
-      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35), 0 2px 8px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.35);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25), 0 2px 8px rgba(0, 0, 0, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.35);
       overflow: hidden;
       display: flex;
       flex-direction: column;
@@ -649,8 +649,8 @@
 
     .pkg-card:hover {
       transform: translateY(-8px);
-      background: rgba(12, 24, 40, 0.92);
-      box-shadow: 0 26px 55px rgba(0, 0, 0, 0.45), 0 4px 16px rgba(249, 112, 1, 0.3), inset 0 1px 2px rgba(255, 255, 255, 0.5);
+      background: rgba(12, 24, 40, 0.45);
+      box-shadow: 0 26px 55px rgba(0, 0, 0, 0.35), 0 4px 16px rgba(249, 112, 1, 0.3), inset 0 1px 2px rgba(255, 255, 255, 0.5);
       border-color: rgba(249, 112, 1, 0.65);
     }
 
@@ -675,7 +675,7 @@
       position: absolute;
       top: 14px;
       left: 14px;
-      background: rgba(0, 0, 0, 0.75);
+      background: rgba(0, 0, 0, 0.30);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
       border: 1px solid rgba(255, 255, 255, 0.3);
@@ -733,9 +733,9 @@
 
     /* Black with Opacity Frosted Glass Snippet Box */
     .pkg-glass-snippet {
-      background: rgba(0, 0, 0, 0.55);
-      backdrop-filter: blur(6px) saturate(180%);
-      -webkit-backdrop-filter: blur(18px) saturate(180%);
+      background: rgba(0, 0, 0, 0.30);
+      backdrop-filter: blur(16px) saturate(180%);
+      -webkit-backdrop-filter: blur(16px) saturate(180%);
       border: 1.5px solid rgba(255, 255, 255, 0.22);
       border-radius: 16px;
       padding: 16px 18px;
@@ -851,19 +851,19 @@
 
     /* Card 2: Custom & Upcoming Packages (Black with Opacity) */
     .pkg-card.pkg-more-soon {
-      background: rgba(12, 24, 40, 0.78);
+      background: rgba(12, 24, 40, 0.30);
       backdrop-filter: blur(20px) saturate(180%);
       -webkit-backdrop-filter: blur(20px) saturate(180%);
       border: 2px dashed rgba(255, 255, 255, 0.3);
       border-radius: 22px;
-      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.3);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.3);
       justify-content: center;
       color: #ffffff;
     }
 
     .pkg-card.pkg-more-soon:hover {
       border-color: var(--primary);
-      background: rgba(12, 24, 40, 0.90);
+      background: rgba(12, 24, 40, 0.45);
     }
 
     .pkg-card.pkg-more-soon .pkg-name {
@@ -878,9 +878,9 @@
       width: 76px;
       height: 76px;
       border-radius: 50%;
-      background: rgba(0, 0, 0, 0.55);
+      background: rgba(0, 0, 0, 0.30);
       border: 1.5px solid rgba(255, 255, 255, 0.28);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -902,7 +902,7 @@
     }
 
     .pkg-dest-chip {
-      background: rgba(0, 0, 0, 0.45);
+      background: rgba(0, 0, 0, 0.30);
       backdrop-filter: blur(8px);
       -webkit-backdrop-filter: blur(8px);
       border: 1px solid rgba(255, 255, 255, 0.22);
@@ -940,13 +940,23 @@
     }
 
     /* =========================================================
-       8. DOMESTIC TOURS SECTION (FROSTED GLASS CARDS)
+       8. DOMESTIC TOURS SECTION (BLACK WITH OPACITY GLASS)
     ========================================================= */
+    #domestic {
+      position: relative;
+      background: radial-gradient(circle at 15% 15%, rgba(1, 121, 189, 0.10) 0%, transparent 45%),
+                  radial-gradient(circle at 85% 85%, rgba(249, 112, 1, 0.10) 0%, transparent 45%),
+                  var(--bg-light);
+      overflow: hidden;
+    }
+
     .domestic-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 24px;
       margin-bottom: 36px;
+      position: relative;
+      z-index: 2;
     }
 
     @media (max-width: 700px) {
@@ -956,35 +966,38 @@
     }
 
     .dom-card {
-      background: var(--glass-bg);
-      backdrop-filter: var(--glass-blur);
-      -webkit-backdrop-filter: var(--glass-blur);
-      border: var(--glass-border);
-      border-radius: var(--radius);
-      box-shadow: var(--glass-shadow);
+      background: rgba(12, 24, 40, 0.30);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border: 1.5px solid rgba(255, 255, 255, 0.22);
+      border-radius: 20px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25), 0 2px 8px rgba(0, 0, 0, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.35);
       display: flex;
       overflow: hidden;
       transition: all var(--transition);
+      color: #ffffff;
     }
 
     .dom-card:hover {
       transform: translateY(-6px);
-      background: var(--glass-bg-hover);
-      border-color: rgba(249, 112, 1, 0.45);
-      box-shadow: var(--glass-shadow-hover);
+      background: rgba(12, 24, 40, 0.45);
+      border-color: rgba(249, 112, 1, 0.65);
+      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.35), 0 4px 16px rgba(249, 112, 1, 0.25), inset 0 1px 2px rgba(255, 255, 255, 0.5);
     }
 
     .dom-img-wrap {
       position: relative;
       flex-shrink: 0;
+      overflow: hidden;
+      border-right: 1px solid rgba(255, 255, 255, 0.18);
     }
 
     .dom-img-wrap img {
-      width: 150px;
+      width: 170px;
       height: 100%;
-      min-height: 170px;
+      min-height: 180px;
       object-fit: cover;
-      transition: transform 0.5s ease;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     @media (max-width: 480px) {
@@ -994,70 +1007,99 @@
     }
 
     .dom-card:hover .dom-img-wrap img {
-      transform: scale(1.03);
+      transform: scale(1.06);
     }
 
     .dom-duration-badge {
       position: absolute;
-      bottom: 10px;
-      left: 0;
-      background: var(--secondary);
-      color: #fff;
-      font-size: 0.7rem;
+      top: 12px;
+      left: 12px;
+      background: rgba(0, 0, 0, 0.30);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: #ffffff;
+      font-size: 0.72rem;
       font-weight: 600;
-      padding: 3px 10px;
-      border-radius: 0 50px 50px 0;
+      padding: 4px 12px;
+      border-radius: 50px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
 
     .dom-body {
-      padding: 18px;
+      padding: 20px 22px;
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 10px;
       flex: 1;
+      color: #ffffff;
     }
 
     .dom-name {
-      font-size: 1.05rem;
+      font-size: 1.18rem;
       font-weight: 700;
-      color: var(--secondary);
+      color: #ffffff;
+      transition: color var(--transition);
+    }
+
+    .dom-card:hover .dom-name {
+      color: #FFA142;
     }
 
     .dom-desc {
-      font-size: 0.82rem;
-      color: var(--text-gray);
+      font-size: 0.84rem;
+      color: rgba(255, 255, 255, 0.82);
       line-height: 1.6;
     }
 
     .dom-price {
-      font-size: 1rem;
+      font-size: 1.15rem;
       font-weight: 700;
-      color: var(--secondary);
+      color: #FFA142;
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
     }
 
     .dom-price span {
-      font-size: 0.72rem;
+      font-size: 0.76rem;
       font-weight: 400;
-      color: var(--text-gray);
+      color: rgba(255, 255, 255, 0.7);
     }
 
     .dom-tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 5px;
+      gap: 6px;
+      margin: 4px 0;
     }
 
     .dom-actions {
       display: flex;
-      gap: 8px;
+      gap: 10px;
       flex-wrap: wrap;
       margin-top: auto;
+      padding-top: 6px;
     }
 
     .dom-actions .btn {
-      padding: 8px 14px;
-      font-size: 0.78rem;
+      padding: 8px 16px;
+      font-size: 0.82rem;
       border-radius: var(--radius-sm);
+    }
+
+    .dom-actions .btn-outline {
+      background: rgba(0, 0, 0, 0.30);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      color: #ffffff;
+    }
+
+    .dom-actions .btn-outline:hover {
+      background: var(--secondary);
+      border-color: var(--secondary);
+      color: #ffffff;
     }
 
     .domestic-cta {
@@ -1436,7 +1478,7 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(15, 28, 48, 0.85);
+      background: rgba(15, 28, 48, 0.30);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
       border: 1px solid rgba(255, 255, 255, 0.25);
@@ -1466,7 +1508,7 @@
 
     /* Black with Opacity Contact Action Cards */
     .contact-action-card {
-      background: rgba(12, 24, 40, 0.82);
+      background: rgba(12, 24, 40, 0.30);
       backdrop-filter: blur(20px) saturate(180%);
       -webkit-backdrop-filter: blur(20px) saturate(180%);
       border: 1.5px solid rgba(255, 255, 255, 0.22);
@@ -1477,7 +1519,7 @@
       align-items: center;
       text-align: center;
       gap: 12px;
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.3);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.3);
       text-decoration: none;
       transition: all var(--transition);
       cursor: pointer;
@@ -1487,9 +1529,9 @@
 
     .contact-action-card:hover {
       transform: translateY(-8px);
-      background: rgba(12, 24, 40, 0.94);
+      background: rgba(12, 24, 40, 0.45);
       border-color: rgba(249, 112, 1, 0.65);
-      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.45), 0 4px 14px rgba(249, 112, 1, 0.25), inset 0 1px 2px rgba(255, 255, 255, 0.45);
+      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.35), 0 4px 14px rgba(249, 112, 1, 0.25), inset 0 1px 2px rgba(255, 255, 255, 0.45);
     }
 
     .cac-icon-wrap {
@@ -1502,13 +1544,13 @@
       transition: transform var(--transition), box-shadow var(--transition);
       flex-shrink: 0;
       border: 1.5px solid rgba(255, 255, 255, 0.25);
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
-      background: rgba(0, 0, 0, 0.5);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+      background: rgba(0, 0, 0, 0.30);
     }
 
     .contact-action-card:hover .cac-icon-wrap {
       transform: scale(1.12);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
     }
 
     .cac-call .cac-icon-wrap {
@@ -1547,7 +1589,7 @@
     /* Black with Opacity Snippet Pill inside Contact Action Cards */
     .cac-glass-snippet {
       width: 100%;
-      background: rgba(0, 0, 0, 0.55);
+      background: rgba(0, 0, 0, 0.30);
       backdrop-filter: blur(14px) saturate(180%);
       -webkit-backdrop-filter: blur(14px) saturate(180%);
       border: 1px solid rgba(255, 255, 255, 0.22);
@@ -1654,11 +1696,11 @@
     }
 
     .map-address-card {
-      background: rgba(12, 24, 40, 0.85);
+      background: rgba(12, 24, 40, 0.30);
       backdrop-filter: blur(20px) saturate(180%);
       -webkit-backdrop-filter: blur(20px) saturate(180%);
       border-radius: 22px;
-      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.3);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.3);
       border: 1.5px solid rgba(255, 255, 255, 0.22);
       overflow: hidden;
       display: grid;
@@ -1670,7 +1712,7 @@
     }
 
     .map-address-card:hover {
-      box-shadow: 0 24px 55px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 24px 55px rgba(0, 0, 0, 0.35);
       border-color: rgba(1, 121, 189, 0.6);
     }
 
@@ -1688,7 +1730,7 @@
       flex-direction: column;
       justify-content: center;
       gap: 16px;
-      background: rgba(12, 24, 40, 0.78);
+      background: rgba(12, 24, 40, 0.30);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
       border-left: 1.5px solid rgba(255, 255, 255, 0.18);
@@ -1713,7 +1755,7 @@
 
     /* Black with Opacity Details Snippet in Map Card */
     .map-glass-snippet {
-      background: rgba(0, 0, 0, 0.55);
+      background: rgba(0, 0, 0, 0.30);
       backdrop-filter: blur(16px) saturate(180%);
       -webkit-backdrop-filter: blur(16px) saturate(180%);
       border: 1.5px solid rgba(255, 255, 255, 0.2);
@@ -2370,6 +2412,11 @@
       /* Domestic Tour Cards */
       .dom-card {
         flex-direction: column;
+      }
+
+      .dom-img-wrap {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.18);
       }
 
       .dom-img-wrap img {
